@@ -6,6 +6,8 @@ public class OnCollision : MonoBehaviour
 {
     MeshRenderer mRenderer;
     int currentSceneIndex;
+    [SerializeField] float delayInSeconds;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +27,19 @@ public class OnCollision : MonoBehaviour
             case "Finish":
                 NextLevel();
                 break;
-            default:
+            case "Danger":
                 GameOver();
                 break;
 
         }
     }
     private void NextLevel()
+    { 
+      GetComponent<Movement>().enabled = false;
+      Invoke("LoadNextLevel", delayInSeconds);
+    }
+
+    private void LoadNextLevel() 
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextIndex = currentSceneIndex + 1;
@@ -39,12 +47,20 @@ public class OnCollision : MonoBehaviour
         {
             nextIndex = 0;
         }
-        SceneManager.LoadScene(nextIndex);        
+        SceneManager.LoadScene(nextIndex); 
     }
+    
     
     private void GameOver()
     {
-        
+        GetComponent<Movement>().enabled = false;
+        Invoke("ReloadLevel", delayInSeconds);
     }
 
+    private void ReloadLevel()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(currentSceneIndex);
+    }
 }
