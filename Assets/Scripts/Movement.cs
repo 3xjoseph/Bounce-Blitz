@@ -5,13 +5,7 @@ using UnityEngine.UIElements.Experimental;
 
 public class Movement : MonoBehaviour
 {
-
     [SerializeField] float moveSpeed; //Set the Speed for your character
-   
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
