@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OnCollision : MonoBehaviour
 {
     MeshRenderer mRenderer;
+    int currentSceneIndex;
     // Start is called before the first frame update
     void Start()
     {
-        mRenderer = GetComponent<MeshRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -19,9 +20,31 @@ public class OnCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) 
     {
-        if (other.gameObject.tag == "Player")
+        switch (other.gameObject.tag)
         {
-            mRenderer.material.color = Color.red;
+            case "Finish":
+                NextLevel();
+                break;
+            default:
+                GameOver();
+                break;
+
         }
     }
+    private void NextLevel()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextIndex = currentSceneIndex + 1;
+        if (nextIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            nextIndex = 0;
+        }
+        SceneManager.LoadScene(nextIndex);        
+    }
+    
+    private void GameOver()
+    {
+        
+    }
+
 }
