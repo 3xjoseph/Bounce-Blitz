@@ -1086,6 +1086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878198015433241200, guid: 7929777353004784a8c750a86f2a431f, type: 3}
+      propertyPath: movementVector.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2018,6 +2022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878198015433241200, guid: 7929777353004784a8c750a86f2a431f, type: 3}
+      propertyPath: movementVector.x
+      value: -0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2460,6 +2468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878198015433241200, guid: 7929777353004784a8c750a86f2a431f, type: 3}
+      propertyPath: movementVector.x
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2756,6 +2768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 8878198015433241200, guid: 7929777353004784a8c750a86f2a431f, type: 3}
+      propertyPath: movementVector.x
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2828,15 +2844,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1867279625306109563, guid: f53f70fa30fdeed4cb0ea10e8a12b02c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.43311146
+      value: 0.42195842
       objectReference: {fileID: 0}
     - target: {fileID: 1867279625306109563, guid: f53f70fa30fdeed4cb0ea10e8a12b02c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.0347395
+      value: 7.955972
       objectReference: {fileID: 0}
     - target: {fileID: 1867279625306109563, guid: f53f70fa30fdeed4cb0ea10e8a12b02c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.7108
+      value: -14.792801
       objectReference: {fileID: 0}
     - target: {fileID: 1867279625306109563, guid: f53f70fa30fdeed4cb0ea10e8a12b02c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2870,6 +2886,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 613747214}
+    - target: {fileID: 4442971964235021114, guid: f53f70fa30fdeed4cb0ea10e8a12b02c, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 10.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4863476490713800351, guid: f53f70fa30fdeed4cb0ea10e8a12b02c, type: 3}
       propertyPath: m_Name
       value: Follow Camera
@@ -2887,17 +2907,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5046548658408312557, guid: 829e5b196fb7c174b9092cda4634dfe4, type: 3}
+      propertyPath: field of view
+      value: 10.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5850857186956221462, guid: 829e5b196fb7c174b9092cda4634dfe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.43311146
+      value: 0.42195842
       objectReference: {fileID: 0}
     - target: {fileID: 5850857186956221462, guid: 829e5b196fb7c174b9092cda4634dfe4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.0347395
+      value: 7.955972
       objectReference: {fileID: 0}
     - target: {fileID: 5850857186956221462, guid: 829e5b196fb7c174b9092cda4634dfe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.7108
+      value: -14.792801
       objectReference: {fileID: 0}
     - target: {fileID: 5850857186956221462, guid: 829e5b196fb7c174b9092cda4634dfe4, type: 3}
       propertyPath: m_LocalRotation.w
