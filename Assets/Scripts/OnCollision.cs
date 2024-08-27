@@ -8,10 +8,15 @@ public class OnCollision : MonoBehaviour
     int currentSceneIndex;
     [SerializeField] float delayInSeconds;
 
+    [SerializeField] AudioClip gameOver;
+
+    // Cache AudioSource Reference
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +58,7 @@ public class OnCollision : MonoBehaviour
     
     private void GameOver()
     {
+        audioSource.PlayOneShot(gameOver);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", delayInSeconds);
     }

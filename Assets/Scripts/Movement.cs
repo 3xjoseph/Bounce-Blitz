@@ -6,12 +6,17 @@ using UnityEngine.UIElements.Experimental;
 public class Movement : MonoBehaviour
 {
     [SerializeField] float moveSpeed; //Set the Speed for your character
-
+    
     void Update()
+    {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
     {
         float xValue = (Input.GetAxis("Horizontal") * Time.deltaTime) * moveSpeed;
         float zValue = (Input.GetAxis("Vertical") * Time.deltaTime) * moveSpeed;
-       
+
         transform.Translate(xValue, 0, zValue);
     }
 }
