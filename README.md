@@ -1,5 +1,5 @@
 # Bounce-Blitz
-Link: [https://sharemygame.com/@3xjoseph/bounce-blitz](https://play.unity.com/en/games/c2e6c74a-69eb-4dff-947b-9694b29bedd5/bounce-blitz)
+Link: https://play.unity.com/en/games/c2e6c74a-69eb-4dff-947b-9694b29bedd5/bounce-blitz
 
 Install: https://www.mediafire.com/file/21ano75rzzgjdq8/Bounce_Blitz.exe/file
 
